@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript 2Day_Quiz1</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    </head>
+    <body>
+
+            <!-- *퀴즈1
+        1. 배경이 회색이고 텍스트가 하얀 메뉴가 3개 있습니다.
+        2. 마우스로 메뉴를 클릭하면 한 메뉴만 배경이 하얗게 외곽선은 검게 텍스트는 검게 변합니다. 
+        3. 다른메뉴를 클릭하면 아까 클릭한 메뉴는 원래대로 돌아오고 클릭한 메뉴가 변화합니다. -->
+
+        <div >
+            <button id="html" class="btn btn-secondary"  >html</button>
+            <button id="css"  class="btn btn-secondary" >CSS</button>
+            <button id="js"  class="btn btn-secondary" >JavaScript</button>
+        </div>
+
+    </body>
+
+    <script>
+
+
+
+        document.getElementById("html").addEventListener("click", function(){
+            change("html");
+
+        });
+
+        document.getElementById("css").addEventListener("click", function(){
+            change("css");
+        });
+
+        document.getElementById("js").addEventListener("click", function(){
+            change("js");
+        });
+
+        
+
+        function change(btns){
+            back();
+            document.getElementById(btns).className = "btn btn-info";
+        }
+
+        function back(){
+            
+            document.getElementById("html").className = "btn btn-secondary";
+            document.getElementById("css").className = "btn btn-secondary";
+            document.getElementById("js").className = "btn btn-secondary";
+        }
+        
+    </script>
+</html>
